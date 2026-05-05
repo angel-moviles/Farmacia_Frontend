@@ -1,0 +1,83 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Variantes */
+.btn-primary {
+  background-color: var(--verde-salud);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #03cfc5;
+}
+
+.btn-secondary {
+  background-color: var(--azul-profesional);
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #037ef1;
+}
+
+.btn-danger {
+  background-color: var(--rojo-peligro);
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #e90606;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--borde);
+  color: var(--texto-principal);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--fondo-principal);
+}
+
+/* Tamaños */
+.btn-small {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-medium {
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.btn-large {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+/* Full width */
+.btn-full {
+  width: 100%;
+}
+
+/* Icono */
+.btn-icon {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}

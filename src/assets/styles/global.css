@@ -1,0 +1,151 @@
+/* ========================================
+   VARIABLES GLOBALES
+   ======================================== */
+
+:root {
+  --primary: #29af00;
+  --primary-dark: #2563eb;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+  /* Colores principales del sistema */
+  --azul-profesional: #2C3E50;
+  --verde-salud: #248510;
+  --naranja-alerta: #E67E22;
+  --rojo-peligro: #f81900;
+  --fondo-principal: #ffffff;
+  --fondo-tarjetas: #FFFFFF;
+  --texto-principal: #000000;
+  --texto-secundario: #64748B;
+  --borde: #83b3f3;
+  /* Modo Claro (default) */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #248510;
+  --text-secondary:#248510;
+  --text-muted: #20aa04;
+  --border-color: #e2e8f0;
+  --border-light: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0,  0, 0, 0.1);
+  --header-bg: #ffffff;
+  --card-bg: #ffffff;
+  --hover-bg: #f1f5f9;
+  --input-bg: #ffffff;
+  --input-border: #e2e8f0;
+  --sidebar-bg: #dfe4f0;
+  --sidebar-card-bg: rgba(255, 255, 255, 0.05);
+  --sidebar-text: #ffffff;
+  --sidebar-text-secondary: #94a3b8;
+  
+  /* Colores de acento */
+  --primary-dark: #ff0080;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+  
+  /* Colores de roles */
+  --rol-admin: #ff00aa;
+  --rol-cajero: #f59e0b;
+  --rol-farmaceutico: #10b981;
+  --rol-auxiliar: #8b5cf6;
+}
+
+/* Modo Oscuro */
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --header-bg: #1e293b;
+  --card-bg: #1e293b;
+  --hover-bg: #334155;
+  --input-bg: #0f172a;
+  --input-border: #334155;
+  --sidebar-bg: #0f172a;
+  --sidebar-card-bg: rgba(255, 255, 255, 0.05);
+  --sidebar-text: #ffffff;
+  --sidebar-text-secondary: #94a3b8;
+}
+
+/* ========================================
+   ESTILOS BASE
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Utilidades */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+
+/* Loading screen */
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 18px;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}

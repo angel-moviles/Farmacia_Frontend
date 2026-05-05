@@ -1,0 +1,177 @@
+.catalogo-page {
+  width: 100%;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-title h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--texto-principal);
+  margin: 0;
+}
+
+.title-icon {
+  color: var(--verde-salud);
+  font-size: 28px;
+}
+
+.header-count {
+  background-color: var(--fondo-principal);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--texto-secundario);
+  border: 1px solid var(--borde);
+}
+
+.filters-card {
+  margin-bottom: 20px;
+  padding: 16px;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--texto-secundario);
+  font-size: 18px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--verde-salud);
+  box-shadow: 0 0 0 3px rgba(243, 243, 243, 0.1);
+}
+
+/* Tabla de catálogos */
+.catalogo-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.catalogo-table th {
+  text-align: left;
+  padding: 16px;
+  background-color: var(--fondo-principal);
+  color: var(--texto-principal);
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid var(--borde);
+}
+
+.catalogo-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--borde);
+  color: var(--texto-principal);
+}
+
+.catalogo-table tbody tr:hover {
+  background-color: var(--fondo-principal);
+}
+
+.action-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--borde);
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-secundario);
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+}
+
+.edit-btn:hover {
+  background-color: var(--verde-salud);
+  color: white;
+  border-color: var(--verde-salud);
+}
+
+.delete-btn:hover {
+  background-color: var(--rojo-peligro);
+  color: white;
+  border-color: var(--rojo-peligro);
+}
+
+.loading-container {
+  text-align: center;
+  padding: 40px;
+  color: var(--texto-secundario);
+}
+
+/* Modal */
+.modal-form {
+  padding: 20px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--borde);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .catalogo-table {
+    font-size: 13px;
+  }
+
+  .action-cell {
+    flex-direction: column;
+  }
+}

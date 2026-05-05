@@ -1,0 +1,274 @@
+.scanner-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.scanner-modal {
+  width: 95%;
+  max-width: 500px;
+  background: #1e293b;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.3s ease;
+}
+
+.scanner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #0f172a;
+  color: white;
+  border-bottom: 1px solid #334155;
+}
+
+.scanner-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  color: white;
+  background: #334155;
+}
+
+.scanner-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #000;
+  overflow: hidden;
+}
+
+.scanner-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scanner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.scanner-frame {
+  width: 80%;
+  height: 60%;
+  border: 2px solid rgba(39, 174, 96, 0.8);
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+}
+
+.scanner-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #27ae60, transparent);
+  animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.scanner-success {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(39, 174, 96, 0.95);
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  animation: slideUp 0.3s ease;
+  z-index: 10;
+}
+
+.success-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.scanner-success p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.success-message {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.scanner-instruction {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  backdrop-filter: blur(4px);
+}
+
+.scanner-error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(231, 76, 60, 0.95);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  padding: 20px;
+}
+
+.error-icon {
+  font-size: 48px;
+}
+
+.scanner-error p {
+  font-size: 14px;
+  margin: 0;
+  max-width: 280px;
+}
+
+.error-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.manual-btn, .retry-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.manual-btn {
+  background: white;
+  color: #e74c3c;
+}
+
+.retry-btn {
+  background: #334155;
+  color: white;
+}
+
+.manual-btn:hover {
+  background: #f1f1f1;
+}
+
+.retry-btn:hover {
+  background: #475569;
+}
+
+.scanner-footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #0f172a;
+  border-top: 1px solid #334155;
+}
+
+.manual-input-btn {
+  flex: 1;
+  padding: 12px;
+  background: #334155;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.manual-input-btn:hover {
+  background: #475569;
+}
+
+.cancel-scan-btn {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  border: 1px solid #ef4444;
+  border-radius: 10px;
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-scan-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
